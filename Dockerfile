@@ -12,7 +12,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -qq --no-install-recommend
     jq \
     lsb-release \
     software-properties-common \
-    wget
+    wget \
+    # 'zip' and 'unzip' are required for ArchiveFiles and ExtractFiles
+    unzip \
+    zip
 
 RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
